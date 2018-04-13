@@ -1,17 +1,16 @@
 <?php
 
 if (isset($_POST['submit'])) {
-	//include_once 'dbc.inc.php';
+	//database connection
+$dbServername = "yusufddac.mysql.database.azure.com";
+$dbUsername = "yusuf@yusufddac";
+$dbPassword = "Abc12345";
+$dbName = "ddac";
 
-	$dbServername = "localhost";
-	$dbUsername = "root";
-	$dbPassword = "";
-	$dbName = "CMS";
+//database connection
 
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
-	//php fucntion conncetion
-
-	$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
   //getting data from the form..
   //mysqli_real_escape_string convert anything to string for security purpose...
 
