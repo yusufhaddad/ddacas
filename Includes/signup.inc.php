@@ -19,7 +19,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 	$address = mysqli_real_escape_string($conn, $_POST['uaddress']);
 	$contact = mysqli_real_escape_string($conn, $_POST['ucontact']);
 */
-	$name =  $_POST['user_name'];
+	$user =  $_POST['user_name'];
 	$email = $_POST['uemail'];
 	$password = $_POST['pwd'];
 	$address = $_POST['uaddress'];
@@ -57,7 +57,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 					//Hashing password
 					$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
           //insert user data into Database
-					$sql1 = "INSERT INTO users (user_name, user_email, user_password, user_address, user_contact) VALUES ('$name','$email', '$hashedPassword', '$address', '$contact');";
+					$sql1 = "INSERT INTO users (user_address,  user_contact, user_email,user_name, user_password) VALUES ('$name','$email', '$hashedPassword', '$address', '$contact');";
 					mysqli_query($conn, $sql1);
 					header("Location: ../signup.php?signup=success");
 					exit();
