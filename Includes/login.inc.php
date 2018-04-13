@@ -7,7 +7,7 @@ session_start();
    include_once 'dbh.inc.php';
 
 
-   $email = $_POST['user_email'];
+   $email = $_POST['eemail'];
    $password =  $_POST['pwd'];
 
    //error handlers
@@ -17,7 +17,7 @@ session_start();
      exit();
 
    }else{
-     $sql = "SELECT * FROM users WHERE user_email='$email'";
+     $sql = "SELECT * FROM users1 WHERE user_email='$email'";
      $result = mysqli_query($conn, $sql);
      $resultCheck = mysqli_num_rows($result);
 
@@ -29,14 +29,7 @@ session_start();
 
        if ($row = mysqli_fetch_assoc($result)){
          //de-hashing the PASSWORD
-         $hashedpwdcheck = password_verify($password, $row['user_password']);
-            if ($hashedpwdcheck == false){
-
-              header("Location: ../index.php?login=error2");
-              exit();
-
-
-            }elseif($hashedpwdcheck == true){
+        
               //log in user here-- session variable super globale access pages
               $_SESSION['user_id'] = $row['user_id'];
               $_SESSION['user_name'] = $row['user_name'];
@@ -45,15 +38,16 @@ session_start();
               header("Location: ../index.php?login=success");
               exit();
 
-          }
-       }
-     }
-   }
-
-
- }else{
+          }else{
 
    header("Location: ../index.php?login=error");
    exit();
 
  }
+
+       }
+     }
+   }
+
+
+ 
