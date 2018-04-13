@@ -1,11 +1,10 @@
 <?php
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "CMS";
+$dbServername = "yusufddac.mysql.database.azure.com";
+$dbUsername = "yusuf@yusufddac";
+$dbPassword = "Abc12345";
+$dbName = "ddac";
 
-
-//php fucntion conncetion
+//database connection
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
