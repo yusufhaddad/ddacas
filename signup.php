@@ -13,11 +13,11 @@ include_once'header.php'
 <!-- Form using action attribute to select which file to load once submit btn is slected...method post -->
 
         <form action="includes/signup.inc.php" method="post">
-          <input type="text" name="username" placeholder="Username">
-          <input type="text" name="useremail" placeholder="Email">
-          <input type="password" name="passwd" placeholder="Password">
-          <input type="text" name="useraddress" placeholder="Address">
-          <input type="text" name="usercontact" placeholder="Contact">
+          <input type="text" name="username1" placeholder="Username">
+          <input type="text" name="useremail1" placeholder="Email">
+          <input type="password" name="passwd1" placeholder="Password">
+          <input type="text" name="useraddress1" placeholder="Address">
+          <input type="text" name="usercontact1" placeholder="Contact">
 
         <br>
         <ul class="actions">
