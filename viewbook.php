@@ -12,7 +12,6 @@ include_once'header.php';
   <!---->
 
   <?php
-
 $dbServername = "yusufddac.mysql.database.azure.com";
 $dbUsername = "yusuf@yusufddac";
 $dbPassword = "Abc12345";
@@ -21,6 +20,8 @@ $dbName = "ddac";
 //database connection
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
+
 
   		$sql = "SELECT * FROM booking WHERE userb_name = '{$_SESSION['user_name']}'";
   		$result = mysqli_query($conn, $sql);
