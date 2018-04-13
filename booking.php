@@ -11,14 +11,13 @@ include_once'header.php';
 <!---->
 
 <?php
+$dbServername = "yusufddac.mysql.database.azure.com";
+$dbUsername = "yusuf@yusufddac";
+$dbPassword = "Abc12345";
+$dbName = "ddac";
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "CMS";
+//database connection
 
-//getting data from db
-//php fucntion conncetion
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 		$sql = "SELECT * FROM client WHERE 1";
@@ -36,15 +35,16 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 <!---->
 
 <?php
-// local db
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "CMS";
+// database
+$dbServername = "yusufddac.mysql.database.azure.com";
+$dbUsername = "yusuf@yusufddac";
+$dbPassword = "Abc12345";
+$dbName = "ddac";
 
-//getting data from db
-//php fucntion conncetion
+//database connection
+
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
 
 		$sql = "SELECT * FROM client WHERE 1";
 		$result = mysqli_query($conn, $sql);
@@ -61,17 +61,15 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 <!---->
 
 <?php
+$dbServername = "yusufddac.mysql.database.azure.com";
+$dbUsername = "yusuf@yusufddac";
+$dbPassword = "Abc12345";
+$dbName = "ddac";
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "CMS";
-
-//getting data from database
-
-//php fucntion conncetion
+//database connection
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
 
 		$sql = "SELECT * FROM client WHERE 1";
 		$result = mysqli_query($conn, $sql);
@@ -89,15 +87,15 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 
 <?php
+$dbServername = "yusufddac.mysql.database.azure.com";
+$dbUsername = "yusuf@yusufddac";
+$dbPassword = "Abc12345";
+$dbName = "ddac";
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "CMS";
+//database connection
 
-//getting data from db
-//php fucntion conncetion
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
 
 		$sql = "SELECT * FROM client WHERE 1";
 		$result = mysqli_query($conn, $sql);
