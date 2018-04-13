@@ -24,7 +24,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 		$result = mysqli_query($conn, $sql);
 //labels 
 		echo '<label for="ct">Container Type: </label>';
-		echo "<select name='Container_type'>";
+		echo "<select name='btype'>";
 		while ($row = mysqli_fetch_array($result)) {
 		echo "<option value ='" . $row['client_type'] ."'>" .$row['client_type'] ."</option>";
 		}
@@ -35,7 +35,6 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 <!---->
 
 <?php
-// database
 $dbServername = "yusufddac.mysql.database.azure.com";
 $dbUsername = "yusuf@yusufddac";
 $dbPassword = "Abc12345";
@@ -50,7 +49,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 		$result = mysqli_query($conn, $sql);
 
 		echo '<label for="cf">Container From: </label>';
-		echo "<select name='Container_from'>";
+		echo "<select name='bfrom'>";
 		while ($row = mysqli_fetch_array($result)) {
 		echo "<option value ='" . $row['client_to'] ."'>" .$row['client_to'] ."</option>";
 		}
@@ -61,6 +60,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 <!---->
 
 <?php
+
 $dbServername = "yusufddac.mysql.database.azure.com";
 $dbUsername = "yusuf@yusufddac";
 $dbPassword = "Abc12345";
@@ -71,11 +71,17 @@ $dbName = "ddac";
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 
+//getting data from database
+
+//php fucntion conncetion
+
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
 		$sql = "SELECT * FROM client WHERE 1";
 		$result = mysqli_query($conn, $sql);
 
 		echo '<label for="cf">Container To: </label>';
-		echo "<select name='Container_to'>";
+		echo "<select name='bto'>";
 		while ($row = mysqli_fetch_array($result)) {
 		echo "<option value ='" . $row['client_from'] ."'>" .$row['client_from'] ."</option>";
 		}
@@ -87,6 +93,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 
 <?php
+
 $dbServername = "yusufddac.mysql.database.azure.com";
 $dbUsername = "yusuf@yusufddac";
 $dbPassword = "Abc12345";
@@ -97,11 +104,15 @@ $dbName = "ddac";
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 
+//getting data from db
+//php fucntion conncetion
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
 		$sql = "SELECT * FROM client WHERE 1";
 		$result = mysqli_query($conn, $sql);
 
 		echo '<label for="cd">Departure: </label>';
-		echo "<select name='Container_departure'>";
+		echo "<select name='bdep'>";
 		while ($row = mysqli_fetch_array($result)) {
 		echo "<option value ='" . $row['client_dep'] ."'>" .$row['client_dep'] ."</option>";
 		}
@@ -115,7 +126,7 @@ $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 if(isset($_SESSION['user_name'])){
 
 	 echo '<label for="cd">Client: </label>';
-	 echo "<select name='Container_client'>";
+	 echo "<select name='bc'>";
 	 echo $_SESSION['user_name'];
 	 echo "<option value ='" . $_SESSION['user_name'] ."'>" .$_SESSION['user_name'] ."</option>";
 
