@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-	//database connection
+	//include_once 'dbc.inc.php';
 $dbServername = "yusufddac.mysql.database.azure.com";
 $dbUsername = "yusuf@yusufddac";
 $dbPassword = "Abc12345";
@@ -11,18 +11,19 @@ $dbName = "ddac";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
+
   //getting data from the form..
   //mysqli_real_escape_string convert anything to string for security purpose...
 
-	$Ctype =  $_POST['Container_type'];
-	$Cfrom = $_POST['Container_from'];
-	$Cto = $_POST['Container_to'];
-	$Cdep = $_POST['Container_departure'];
-  $Cclient = $_POST['Container_client'];
+	$Ctype =  $_POST['btype'];
+	$Cfrom = $_POST['bfrom'];
+	$Cto = $_POST['bto'];
+	$Cdep = $_POST['bdep'];
+  $Cc = $_POST['bc'];
 
   //insert user data into Database
-  $sql1 = "INSERT INTO booked (bc_type, bc_from, bc_to, bc_dep, buser_name) VALUES ('$Ctype','$Cfrom',
-    '$Cto', '$Cdep', '$Cclient');";
+  $sql1 = "INSERT INTO booking (conb_type, conb_from, conb_to, conb_dep, userb_name) VALUES ('$Ctype','$Cfrom',
+    '$Cto', '$Cdep', '$Cc');";
   mysqli_query($conn, $sql1);
   header("Location: ../index.php?Booked=success");
   exit();
